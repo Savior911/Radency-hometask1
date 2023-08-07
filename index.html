@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radency Task1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="table-container">
+            <table id="notes-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Created</th>
+                        <th>Category</th>
+                        <th>Content</th>
+                        <th>Dates</th>
+                        <th>Edit</th>
+                        <th>
+                            <button id="unarchive-all">Unarchive All</button>
+                        </th>
+                        <th>
+                            <button id="remove-all">Remove All</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button type="button" id="create-button">Create Note</button>
+        <table id="summary-table">
+            <thead>
+                <tr>
+                    <th>Note Category</th>
+                    <th>Active</th>
+                    <th>Archived</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <h2>Create Note</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <br>
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option>Task</option>
+                        <option>Random Thought</option>
+                        <option>Idea</option>
+                    </select>
+                    <br>
+                    <label for="content">Content:</label>
+                    <textarea id="content" required></textarea>
+                    <br>
+                    <button type="submit" id="submit-button">Submit</button>
+                    <button type="button" id="cancel-button">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
